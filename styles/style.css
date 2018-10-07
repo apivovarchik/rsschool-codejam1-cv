@@ -1,3 +1,46 @@
-body {
-  background-color: #252525;
+body{
+    background-color: #252525;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 300px 1fr 0.1fr;
+  grid-template-columns: 300px 1fr;
+  grid-gap: 0px;
+  grid-template-areas: "headlogo headinfo"
+                       "info headinfo"
+                       "foot foot";
+  background-color: black;
+  color: #eddada;
+  overflow: hidden;
+  min-width: 440px;
+  max-width: 1024px;
+  height: 100%;
+  margin: 20px auto;
+}
+
+* {box-sizing: border-box;}
+
+.headlogo{
+    grid-area: headlogo;
+}
+
+.headinfo{
+    grid-area: headinfo;
+    background: linear-gradient(#0B0B0B, #191919);
+    padding: 1em;
+    color: white;
+}
+.info{
+    grid-area: info;
+    background: linear-gradient(#0B0B0B, #191919);
+    padding: 1em;
+    color: white;
+}
+
+.foot {
+    grid-area: foot;
+    background: linear-gradient(#0B0B0B, #191919);
+    padding: 1em;
+    color: white;
 }
